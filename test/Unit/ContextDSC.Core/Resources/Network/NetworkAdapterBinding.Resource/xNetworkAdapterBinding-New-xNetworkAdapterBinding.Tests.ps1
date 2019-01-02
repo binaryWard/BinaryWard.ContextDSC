@@ -73,10 +73,10 @@ Describe "Resource\xNetworkAdapterBinding\New-xNetworkAdapterBinding" {
     }
 
     Context 'declare literal array using function' {
-        #>
+        <#
             this test may be a test testing literal configuration by code
             emulating the DSC configuration without having custom DSL
-        #<
+        #>
         $MockAdapterInterfaceAlias = "Ethernet$([System.Guid]::NewGuid().ToString("n"))"
 
         $xNetworkAdapterBindingInstances = @(
