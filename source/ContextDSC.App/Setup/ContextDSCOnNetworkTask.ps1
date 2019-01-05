@@ -60,9 +60,9 @@ function Register-ContextDSCOnNetworkTask() {
 
     $private:workstationConventions = Get-ContextDSCAppConventions
    
-    $private:oneventScriptPath = $TargetScript
-    $private:taskXml.Task.Actions.Exec.Arguments = "-ExecutionPolicy bypass `"$($private:oneventScriptPath.FullName)`""
-    $private:taskXml.Task.Actions.Exec.WorkingDirectory = $private:oneventScriptPath.Directory.FullName
+    $private:oneventScriptPath = $TargetScript.FullName
+    $private:taskXml.Task.Actions.Exec.Arguments = "-ExecutionPolicy bypass -File `"$private:oneventScriptPath`" -ContextDscPath `"$PSScriptRoot\..\..\BinaryWard.ContextDSC.ps1`""
+    $private:taskXml.Task.Actions.Exec.WorkingDirectory = "$PSScriptRoot\..\..\"
 
     Register-ScheduledTask -TaskName $private:workstationConventions.ScheduledTask.CdscOnNetworkProfileEvent10000 -Xml $private:taskXml.OuterXml
 }
