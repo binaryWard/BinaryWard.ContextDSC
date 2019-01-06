@@ -1,6 +1,6 @@
 Set-StrictMode -Version 'Latest'
 function GetNetConnectionProfileName() {
-  (Get-NetConnectionProfile).Name | Sort-Object | Get-Unique
+  (Get-NetConnectionProfile).Name
 }
 
 function HasElevatedShell() {
@@ -13,7 +13,15 @@ function HasElevatedShell() {
   netsh will work without elevated acccess but it fails to handle UTF-8 correctly.
   Extended ASCII > 127 is encoded as UTF-8 two bytes and these applications fail to hanle this correctly.
 #>
-
+function GetRegistryProfileName() {
+  try {
+    Push-Location 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles'
+    (Get-Childitem | Get-ItemProperty).ProfileName 
+  }
+  finally {
+    Pop-Location
+  }
+}
 function TryGetRegistryProfileName() {
   <#
     To access the registry the shell must be run as administrator.  
@@ -27,13 +35,8 @@ function TryGetRegistryProfileName() {
   GetRegistryProfileName
 }
 
-function GetRegistryProfileName() {
-  
-  try {
-    Push-Location 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles'
-    (Get-Childitem | Get-ItemProperty).ProfileName 
-  }
-  finally {
-    Pop-Location
-  }
+
+function GetNetworkName() {
+  # the grouping is to make sure all content is joined before the pipe.
+  ((GetNetConnectionProfileName) + (TryGetRegistryProfileName)) | Sort-Object | Get-Unique
 }

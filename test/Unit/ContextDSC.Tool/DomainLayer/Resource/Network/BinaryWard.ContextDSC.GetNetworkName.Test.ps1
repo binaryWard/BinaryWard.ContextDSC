@@ -54,3 +54,15 @@ Describe "ContextDSC.Tool\DomainLayer\Resource\Network Network names from regist
   
   }
 }
+
+
+Describe "ContextDSC.Tool\DomainLayer\Resource\Network Get Name List" {
+  . "$PSScriptRoot\..\..\..\..\..\..\source\ContextDSC.Tool\DomainLayer\Resource\Network\BinaryWard.ContextDSC.GetNetworkName.ps1" 
+
+  Context 'Get network names and handle elevated shell silently' {
+
+    It 'should return at least one network name' {
+      GetNetworkName | Should -BeGreaterThan 0
+    }
+  }
+}
