@@ -73,37 +73,41 @@ Describe "Resource\xNetworkAdapterBinding\New-xNetworkAdapterBinding" {
     }
 
     Context 'declare literal array using function' {
-        # Find out why this fails.  what is going on with the types during runtime?
+        <#
+            this test may be a test testing literal configuration by code
+            emulating the DSC configuration without having custom DSL
+        #>
         $MockAdapterInterfaceAlias = "Ethernet$([System.Guid]::NewGuid().ToString("n"))"
 
         $xNetworkAdapterBindingInstances = @(
-            New-xNetworkAdapterBinding @{
+            $(New-xNetworkAdapterBinding @{
                 InterfaceAlias = $MockAdapterInterfaceAlias;
                 ComponentId    = "ms_msclient";
                 State          = "Disabled";
-            },
-            New-xNetworkAdapterBinding @{
+            }),
+            $(New-xNetworkAdapterBinding @{
                 InterfaceAlias = $MockAdapterInterfaceAlias;
                 ComponentId    = "ms_lldp";
                 State          = "Disabled";
-            },
-            New-xNetworkAdapterBinding @{
+            }),
+            $(New-xNetworkAdapterBinding @{
                 InterfaceAlias = $MockAdapterInterfaceAlias;
                 ComponentId    = "ms_lltdio";
                 State          = "Disabled";
-            },
-            New-xNetworkAdapterBinding @{
+            }),
+            $(New-xNetworkAdapterBinding @{
                 InterfaceAlias = $MockAdapterInterfaceAlias;
                 ComponentId    = "ms_rspndr";
                 State          = "Disabled";
-            },
-            New-xNetworkAdapterBinding @{
+            }),
+            $(New-xNetworkAdapterBinding @{
                 InterfaceAlias = $MockAdapterInterfaceAlias;
                 ComponentId    = "ms_server";
                 State          = "Disabled";
-            }
+            })
         )
  
+        Write-Host $($xNetworkAdapterBindingInstances.GetType())
         It 'should be an array of the configuration states' {
             $xNetworkAdapterBindingInstances.Count | Should Be 5
         }
