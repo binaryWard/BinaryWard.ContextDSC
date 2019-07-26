@@ -20,6 +20,6 @@ BinaryWard.ContextDSC is able to change network adapter binding settings and the
 Upon the network event the user defined configuration may use network name or interface alias.
 
 ### Windows Desired State Configuration (DSC)
-BinaryWare-ContextDSC does not utilize the Windows DSC management platform and is not able to use DSC configurations or use existing DSC Resources.  The supported resources are adapted to fit within this project.
 
-More research is required to determine how the Windows DSC management platform could be used to implement a context desired state configuration implementation.
+BinaryWard-ContextDSC does not utilize the Windows DSC management platform and is not able to use DSC configurations or use existing DSC Resources.  The supported resources are adapted to fit within this project.
+If a method to utilize Windows DSC management platform would improve the resources available.  This is under research.
