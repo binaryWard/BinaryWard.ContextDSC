@@ -1,6 +1,6 @@
 Set-StrictMode -Version 'Latest'
 
-. "$PSScriptRoot\..\..\..\..\..\..\source\ContextDSC.Core\Resources\Network\NetworkAdapterBinding.Resource\xNetworkAdapterBinding.ps1"
+. "$PSScriptRoot\..\..\..\..\..\..\source\ContextDSC\ContextDSC.Core\Resources\Network\NetworkAdapterBinding.Resource\xNetworkAdapterBinding.ps1"
 
 Describe "Resource\xNetworkAdapterBinding\Get_TargetResource" {
     

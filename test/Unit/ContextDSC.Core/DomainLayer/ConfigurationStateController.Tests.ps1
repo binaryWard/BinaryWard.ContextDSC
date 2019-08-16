@@ -1,8 +1,8 @@
 Set-StrictMode -Version 'Latest'
 
-. "$PSScriptRoot\..\..\..\..\source\ContextDSC.Core\DomainLayer\ConfigurationStateController.ps1"
-. "$PSScriptRoot\..\..\..\..\source\ContextDSC.Core\Resources\Network\NetworkAdapterBinding.Resource\xNetworkAdapterBinding.ps1"
-. "$PSScriptRoot\..\..\..\..\source\ContextDSC.Core\Resources\Network\NetworkConnectionProfile.Resource\xNetworkConnectionProfile.ps1"
+. "$PSScriptRoot\..\..\..\..\source\ContextDSC\ContextDSC.Core\DomainLayer\ConfigurationStateController.ps1"
+. "$PSScriptRoot\..\..\..\..\source\ContextDSC\ContextDSC.Core\Resources\Network\NetworkAdapterBinding.Resource\xNetworkAdapterBinding.ps1"
+. "$PSScriptRoot\..\..\..\..\source\ContextDSC\ContextDSC.Core\Resources\Network\NetworkConnectionProfile.Resource\xNetworkConnectionProfile.ps1"
 
 Describe "DomainLayer\ConfigurationStateController" {
     
