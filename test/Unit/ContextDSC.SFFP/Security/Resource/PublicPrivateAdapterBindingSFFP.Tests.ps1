@@ -1,6 +1,6 @@
 Set-StrictMode -Version 'Latest'
 
-. "$PSScriptRoot\..\..\..\..\..\source\ContextDSC.SFFP\Security\Resource\PublicPrivateAdapterBindingSFFP.ps1"
+. "$PSScriptRoot\..\..\..\..\..\source\ContextDSC\ContextDSC.SFFP\Security\Resource\PublicPrivateAdapterBindingSFFP.ps1"
 
 
 Describe "ContextDSC.SFFP\Security\AdapterBinding Resource Profile" {

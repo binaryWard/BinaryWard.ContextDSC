@@ -1,7 +1,7 @@
 Set-StrictMode -Version 'Latest'
 
 Describe "ContextDSC.Tool\DomainLayer\Resource\Network\Get Network Names" {
-  . "$PSScriptRoot\..\..\..\..\..\..\source\ContextDSC.Tool\DomainLayer\Resource\Network\BinaryWard.ContextDSC.GetNetworkName.ps1" 
+  . "$PSScriptRoot\..\..\..\..\..\..\source\ContextDSC\ContextDSC.Tool\DomainLayer\Resource\Network\BinaryWard.ContextDSC.GetNetworkName.ps1" 
 
   Context 'Get network names from adapter connections' {
 
@@ -25,7 +25,7 @@ Describe "ContextDSC.Tool\DomainLayer\Resource\Network\Get Network Names" {
 }
 
 Describe "ContextDSC.Tool\DomainLayer\Resource\Network Elevated Shell" {
-  . "$PSScriptRoot\..\..\..\..\..\..\source\ContextDSC.Tool\DomainLayer\Resource\Network\BinaryWard.ContextDSC.GetNetworkName.ps1" 
+  . "$PSScriptRoot\..\..\..\..\..\..\source\ContextDSC\ContextDSC.Tool\DomainLayer\Resource\Network\BinaryWard.ContextDSC.GetNetworkName.ps1" 
 
   Context 'Get elevated shell status' {
 
@@ -36,7 +36,7 @@ Describe "ContextDSC.Tool\DomainLayer\Resource\Network Elevated Shell" {
 }
 
 Describe "ContextDSC.Tool\DomainLayer\Resource\Network Network names from registry" {
-  . "$PSScriptRoot\..\..\..\..\..\..\source\ContextDSC.Tool\DomainLayer\Resource\Network\BinaryWard.ContextDSC.GetNetworkName.ps1" 
+  . "$PSScriptRoot\..\..\..\..\..\..\source\ContextDSC\ContextDSC.Tool\DomainLayer\Resource\Network\BinaryWard.ContextDSC.GetNetworkName.ps1" 
 
   Context 'Call TryGetRegistry and results are based upon elevated status' {
 
@@ -57,7 +57,7 @@ Describe "ContextDSC.Tool\DomainLayer\Resource\Network Network names from regist
 
 
 Describe "ContextDSC.Tool\DomainLayer\Resource\Network Get Name List" {
-  . "$PSScriptRoot\..\..\..\..\..\..\source\ContextDSC.Tool\DomainLayer\Resource\Network\BinaryWard.ContextDSC.GetNetworkName.ps1" 
+  . "$PSScriptRoot\..\..\..\..\..\..\source\ContextDSC\ContextDSC.Tool\DomainLayer\Resource\Network\BinaryWard.ContextDSC.GetNetworkName.ps1" 
 
   Context 'Get network names and handle elevated shell silently' {
 

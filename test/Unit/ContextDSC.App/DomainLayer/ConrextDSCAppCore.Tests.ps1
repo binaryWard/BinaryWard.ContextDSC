@@ -1,6 +1,6 @@
 Set-StrictMode -Version 'Latest'
 
-. "$PSScriptRoot\..\..\..\..\source\ContextDSC.App\DomainLayer\ContextDSCAppCore.ps1"
+. "$PSScriptRoot\..\..\..\..\source\ContextDSC\ContextDSC.App\DomainLayer\ContextDSCAppCore.ps1"
 
 Describe "ContextDSC.App\DomainLayer\ContextDSCAppCore" {
     

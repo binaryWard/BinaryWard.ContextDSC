@@ -1,6 +1,6 @@
 Set-StrictMode -Version 'Latest'
 
-. "$PSScriptRoot\..\..\..\..\..\source\ContextDSC.SFFP\Security\Resource\PublicPrivateConnectionProfileSFFP.ps1"
+. "$PSScriptRoot\..\..\..\..\..\source\ContextDSC\ContextDSC.SFFP\Security\Resource\PublicPrivateConnectionProfileSFFP.ps1"
 
 
 Describe "ContextDSC.SFFP\Security\ConnectionProfile Resource Profile" {
