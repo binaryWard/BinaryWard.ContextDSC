@@ -2,9 +2,9 @@ Set-StrictMode -Version 'Latest'
 
 
 Describe "ContextDSC.SFFP\Security\PublicPrivateNetworkSFFP" {
-    #Import-Module -Name "$PSScriptRoot\..\..\..\..\source\ContextDSC.SFFP\BinaryWard.ContextDSC.SFFP.psd1"
-    . "$PSScriptRoot\..\..\..\..\source\ContextDSC.SFFP\Security\Model\SecurityNetworkProfileModel.ps1" 
-    . "$PSScriptRoot\..\..\..\..\source\ContextDSC.SFFP\Security\PublicPrivateNetworkSFFP.ps1"
+    #Import-Module -Name "$PSScriptRoot\..\..\..\..\source\ContextDSC\ContextDSC.SFFP\BinaryWard.ContextDSC.SFFP.psd1"
+    . "$PSScriptRoot\..\..\..\..\source\ContextDSC\ContextDSC.SFFP\Security\Model\SecurityNetworkProfileModel.ps1" 
+    . "$PSScriptRoot\..\..\..\..\source\ContextDSC\ContextDSC.SFFP\Security\PublicPrivateNetworkSFFP.ps1"
 
     Context 'Empty config and no net connection profiles' {
 

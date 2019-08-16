@@ -1,7 +1,7 @@
 Set-StrictMode -Version 'Latest'
 
-. "$PSScriptRoot\..\..\..\..\source\ContextDSC.App\DomainLayer\ApplicationStateController.ps1"
-. "$PSScriptRoot\..\..\..\..\source\ContextDSC.App\DomainLayer\Model\ApplicationSetStateModel.ps1"
+. "$PSScriptRoot\..\..\..\..\source\ContextDSC\ContextDSC.App\DomainLayer\ApplicationStateController.ps1"
+. "$PSScriptRoot\..\..\..\..\source\ContextDSC\ContextDSC.App\DomainLayer\Model\ApplicationSetStateModel.ps1"
 . "$PSScriptRoot\..\..\Mock\Resource\AuditCall.Resource\xAuditCall.ps1"
 
 Describe "ContextDSC.App\DomainLayer\ApplicationStateController" {

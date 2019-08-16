@@ -1,6 +1,6 @@
 Set-StrictMode -Version 'Latest'
 
-. "$PSScriptRoot\..\..\..\..\..\source\ContextDSC.App\DomainLayer\Model\ApplicationSetStateResultModel.ps1"
+. "$PSScriptRoot\..\..\..\..\..\source\ContextDSC\ContextDSC.App\DomainLayer\Model\ApplicationSetStateResultModel.ps1"
 
 Describe "ContextDSC.App\DomainLayer\Model\ApplicationSetStateResultModel" {
     

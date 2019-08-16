@@ -1,6 +1,6 @@
 Set-StrictMode -Version 'Latest'
 
-. "$PSScriptRoot\..\..\..\..\..\..\source\ContextDSC.Core\Resources\Network\NetworkConnectionProfile.Resource\xNetworkConnectionProfile.ps1"
+. "$PSScriptRoot\..\..\..\..\..\..\source\ContextDSC\ContextDSC.Core\Resources\Network\NetworkConnectionProfile.Resource\xNetworkConnectionProfile.ps1"
 
 Describe "Resource\xNetworkConnectionProfile\Test_TargetResource" {
     
